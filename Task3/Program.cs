@@ -7,7 +7,7 @@ public class Program
         int[] nums = { 1, 1, 0, 1, 1, 1 };
         int k = 1;
         Console.WriteLine($"Array: [{string.Join(", ", nums)}], k = {k}");
-        Console.WriteLine($"Maximum consecutive ones: {LongestOnes(nums, k)}");
+        Console.WriteLine(LongestOnes(nums, k));
     }
 
     public static int LongestOnes(int[] nums, int k)
