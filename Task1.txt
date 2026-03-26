@@ -1,0 +1,34 @@
+using System;
+
+namespace task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(CanConstruct("a", "b"));
+            Console.WriteLine(CanConstruct("aa", "aab"));
+        }
+        public static bool CanConstruct(string ransomNote, string magazine)
+        {
+            char[] noteArr = ransomNote.ToCharArray();
+            char[] magArr = magazine.ToCharArray();
+            Array.Sort(noteArr);
+            Array.Sort(magArr);
+
+            int i = 0;
+            int j = 0;
+
+            while (i < noteArr.Length && j < magArr.Length)
+            {
+                if (noteArr[i] == magArr[j])
+                {
+                    i++;
+                }
+                j++;
+            }
+
+            return i == noteArr.Length;
+        }
+    }
+}
